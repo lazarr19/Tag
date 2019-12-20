@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+
+            <TextView 
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Tag game"
+            android:textSize="24sp"
+            android:textColor="#FFF"/>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    
+    <Button
+        android:id="@+id/GetTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Who is the tag?"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="10dp"
+    />
+
+    <TextView
+        android:id="@+id/TextTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tag currently is: " 
+        android:layout_centerHorizontal="true"
+        android:translationX="-20dp"
+        android:layout_below="@id/GetTag"
+        
+    />
+
+    <TextView
+        android:id="@+id/Tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/TextTag"
+        android:layout_alignBaseline="@+id/TextTag"
+        android:translationX="-20dp"
+        android:textStyle="bold"
+        android:typeface="serif"
+    />
+
+    
+    
+    <TextView
+        android:id="@+id/TimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal= "true"
+        android:text="Last time you were taged:"
+        android:layout_below="@id/Tag"
+        android:layout_marginTop="50dp"
+    />
+
+    <TextView
+        android:id="@+id/TimeData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TimeText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="70dp"
+        android:textStyle="bold"
+        android:typeface="serif"
+    />
+
+
+
+
+    <Spinner
+        android:id="@+id/SelectSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/TimeData"
+        android:translationX="25dp"
+        android:layout_margin="20dp"
+    />
+
+
+    <Button
+        android:id="@+id/SetTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SelectSpinner"
+        android:text="Tag!"
+        android:layout_centerHorizontal="true"
+    />
+
+
+
+</RelativeLayout>
